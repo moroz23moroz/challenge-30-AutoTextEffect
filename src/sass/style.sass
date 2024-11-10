@@ -12,9 +12,9 @@ body
     flex-direction: column
     align-items: center
     justify-content: center
-    // background: $dark-color
-    // font-family: $lato
-    // color: $main-color
+    background-color: darksalmon
+    font-family: $сomfortaa
+    color: grey
 
 *
     box-sizing: border-box
@@ -23,34 +23,21 @@ body
 html
     scroll-behavior: smooth
 
-button
-    padding: 0
-    background-color: transparent
+.inner
+    position: absolute
+    bottom: 20px
+    background: rgba(0, 0, 0, 0.1)
+    color: #333
+    padding: 10px 20px
+    font-size: 18px
+
+input
+    width: 50px
+    padding: 5px
+    font-size: 18px
+    background-color: darksalmon
     border: none
-
-h1, h2, h3, h4
-    margin: 0
-    font-weight: normal
-
-img
-    width: auto
-    max-width: 100%
-    height: auto
-
-iframe, img, svg, video
-    max-width: 100%
-    vertical-align: top
-    height: auto
-
-p
-    margin: 0
-
-ul
-    margin: 0
-    padding-left: 0
-
-li
-    list-style-type: none
-
-a
-    text-decoration: none
+    text-align: center
+    &:focus
+        outline: focus
+        outline-color: salmon
