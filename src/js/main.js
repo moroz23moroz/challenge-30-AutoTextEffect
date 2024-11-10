@@ -1,4 +1,21 @@
-window.addEventListener('DOMContentLoaded', () => {
-    console.log('start')
-})
+window.addEventListener("DOMContentLoaded", () => {
+  const textEl = document.getElementById("text");
+  const speedEl = document.getElementById("speed");
+  const text = "I'm Moroz Marina Valerevna, front-end developer";
+  let idx = 1;
+  let speed = 300 / speedEl.value;
 
+  writeText();
+
+  function writeText() {
+    textEl.innerText = text.slice(0, idx);
+    idx++;
+
+    if (idx > text.length) {
+      idx = 1;
+    }
+    setTimeout(writeText, speed);
+  }
+
+  speedEl.addEventListener("input", (e) => (speed = 300 / e.target.value));
+});
